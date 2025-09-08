@@ -1,0 +1,9 @@
+
+---
+
+## 🔹 3. requirements.txt
+
+```txt
+# Only sqlite3 is used, which comes with Python by default.
+# But keeping for clarity.
+sqlite3
