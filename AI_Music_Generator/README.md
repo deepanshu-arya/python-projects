@@ -1,15 +1,12 @@
-# Expense Tracker
+# 🎶 AI Music Generator
 
-A simple Python command-line app to track your daily expenses.
+An **AI-based music generator** that creates random melodies using Python.  
+It generates **MIDI files** which can be played in any music player.
 
-## Features
-- Add expenses with description and amount
-- View all expenses
-- Calculate total expenses
-- Save data in a file
+## 🚀 Features
+- Generates random melodies based on music scales
+- Exports to `.mid` files
+- Works on Windows / Mac / Linux
+- Simple AI logic (random + rules)
 
-## Installation
-```bash
-git clone https://github.com/deepanshu-arya/python-projects.git
-cd python-projects
-pip install -r requirements.txt
+## 📂 Project Structure
