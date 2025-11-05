@@ -1,0 +1,6 @@
+txt
+# FileMaster Organizer Project
+# No external packages are needed.
+# All modules are built-in.
+os
+shutil
