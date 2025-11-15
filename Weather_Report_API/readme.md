@@ -1,16 +1,16 @@
-# 📊 Python Report API
+# ⛅ Weather Report API (FastAPI)
 
-A FastAPI-based backend service to generate dynamic reports in **PDF, CSV, and JSON formats**.  
-The API is lightweight, fast, and designed for easy integration with any frontend or automation system.
+A simple and fast **Weather Report API** built using FastAPI.  
+It fetches real-time weather information such as temperature, humidity, wind speed, and conditions.
 
 ---
 
 ## 🚀 Features
-- Generate PDF reports using ReportLab  
-- Export data as CSV  
-- Get clean JSON responses  
-- Simple and modular FastAPI architecture  
-- Easy to extend for custom reports  
+- Get real-time weather data  
+- Fetch temperature, humidity, wind speed  
+- Clean and minimal FastAPI structure  
+- Easy to integrate with mobile or web apps  
+- Supports city-based weather queries  
 
 ---
 
@@ -18,10 +18,13 @@ The API is lightweight, fast, and designed for easy integration with any fronten
 - Python 3  
 - FastAPI  
 - Uvicorn  
-- Pandas  
-- ReportLab  
-- Jinja2  
+- Requests Library  
+- OpenWeatherMap API (or your preferred API)
 
 ---
 
 ## 📁 Project Structure
+WeatherAPI/
+├── Weather_Report_API.py
+├── screenshot
+└── README.md
