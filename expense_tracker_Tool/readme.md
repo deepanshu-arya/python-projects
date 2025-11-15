@@ -23,3 +23,7 @@ This tool helps users **add, delete, view, and store expenses** in a clean and o
 ---
 
 ## 📁 Project Structure
+ExpenseTracker/
+│── expense_tracker.py
+│── requirements.txt
+│── README.md
