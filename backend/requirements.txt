@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-multipart
+reportlab
+pytesseract
+pillow
+pdf2image
+vosk
+soundfile
