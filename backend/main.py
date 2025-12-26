@@ -7,15 +7,12 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from fastapi import UploadFile, File
 import shutil
-from services.ocr import read_image_text, read_pdf_text
-from services.voice import speech_to_text
-from services.ai import parse_items
 from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime
 from sqlalchemy.orm import sessionmaker, declarative_base
 from datetime import datetime
 import re
 import uuid
-from services.whatsapp import send_whatsapp_message
+
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -120,6 +117,7 @@ def home():
 
 @app.post("/transaction")
 def create_transaction(data: TransactionInput, db: Session = Depends(get_db)):
+    from services.whatsapp import send_whatsapp_message
     # SIMPLE PRICE LOGIC (for demo)
     total = len(data.audio_text.split()) * 10  
 
@@ -154,6 +152,7 @@ def create_transaction(data: TransactionInput, db: Session = Depends(get_db)):
 
 @app.post("/ocr/upload")
 async def upload_bill(file: UploadFile = File(...)):
+    from services.ocr import read_image_text, read_pdf_text
     file_path = f"ocr_uploads/{file.filename}"
 
     with open(file_path, "wb") as buffer:
@@ -171,6 +170,7 @@ async def upload_bill(file: UploadFile = File(...)):
 
 @app.post("/voice/upload")
 async def upload_voice(file: UploadFile = File(...)):
+    from services.voice import speech_to_text
     if not file.filename.lower().endswith((".wav", ".flac", ".ogg")):
         raise HTTPException(
             status_code=400,
@@ -191,6 +191,7 @@ async def upload_voice(file: UploadFile = File(...)):
 
 @app.post("/ai/parse")
 async def parse_text(text: str):
+    from services.ai import parse_items
     items = parse_items(text)
     return {
         "input_text": text,
